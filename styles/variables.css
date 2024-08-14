@@ -1,7 +1,3 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   --main-font: 'IBM Plex mono';
   --accent-color: #FF0070;
@@ -12,6 +8,7 @@
   --decorative-element-color:#FF0070;
   --paragraph-decor:#000028;
   --paragrapg-bg:#FF0070;
+  --header-footer-shadow-color: #ff0070;
   --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --media-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vi, 7.5rem);
   --padding: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
