@@ -5,8 +5,20 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-font: 'IBM Plex mono';
+  --accent-color: #ff8dcb;
+  --bg-color: #fff1f7;
+  --text-color: #353430;
+  --decorative-element-color:#353430;
+  --title-color: #ffc2e6;
+  --paragraph-decor:#353430;
+  --paragrapg-bg:#ff8dcb;
+  --font-size: 18px;
+  --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --media-font-size-small: clamp(7.25rem, 7.0115rem + 1.0178vi, 7.5rem);
+  --padding: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
+  --cover-image-url: url(../images/cover-image-light.png);
+}
+.theme_light .decorative-element {
+  display: none;
 }
