@@ -16,6 +16,7 @@
   block-size: 100vh;
   min-block-size: 768px;
   @media (max-width: 375px) {
+    min-block-size: 100vh;
     max-inline-size: 375px;
   }
 }
@@ -134,7 +135,7 @@
 
 .header__paragraph {
   align-self: center;
-  inline-size: max(47.5vw, 355px);
+  inline-size: max(48vw, 355px);
   block-size: min-content;
   justify-self: right;
   font-weight: 700;
@@ -211,8 +212,9 @@
 }
 
 .section-title {
-  max-inline-size: 80%;
+  max-inline-size: 32%;
   @media (max-width: 768px) {
+    max-inline-size:none;
     inline-size: 32%;
   }
   @media (max-width: 375px) {
