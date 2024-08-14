@@ -1,6 +1,6 @@
 .page {
   display: grid;
-  background: var(--cover-image-url) center / 100% 100vh no-repeat;
+  background: var(--cover-image-url) center / cover no-repeat;
   background-color: var(--bg-color, #000028);
   background-attachment: fixed;
   font-family: var(--main-font, sans-serif);
@@ -16,12 +16,11 @@
   block-size: 100vh;
   min-block-size: 768px;
   @media (max-width: 375px) {
-    min-block-size: 668px;
     max-inline-size: 375px;
   }
 }
-
-.header::before {
+.decorated-zone {
+  &::before {
   position: absolute;
   inset-block-start: 20px;
   inset-inline-end: 20px;
@@ -30,28 +29,28 @@
   block-size: 25px;
   border-block-start: 1px solid var(--decorative-element-color, #ff0070);
   border-inline-end: 1px solid var(--decorative-element-color, #ff0070);
+  }
+  &::after {
+    position: absolute;
+    inset-block-end: 21px;
+    inset-inline-start: 20px;
+    content: "";
+    inline-size: 25px;
+    block-size: 25px;
+    border-block-end: 1px solid var(--decorative-element-color, #ff0070);
+    border-inline-start: 1px solid var(--decorative-element-color, #ff0070); 
+  }
 }
 
 @media (max-width: 375px) {
-  .header::before {
+  .decorated-zone::before {
     inset-block-start: 10px;
     inset-inline-end: 10px;
   }
 }
 
-.header::after {
-  position: absolute;
-  inset-block-end: 21px;
-  inset-inline-start: 20px;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: 1px solid var(--decorative-element-color, #ff0070);
-  border-inline-start: 1px solid var(--decorative-element-color, #ff0070);
-}
-
 @media (max-width: 375px) {
-  .header::after {
+  .decorated-zone::after {
     inset-block-end: 10px;
     inset-inline-start: 10px;
   }
@@ -113,7 +112,13 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid currentColor;
+  outline: 1px solid transparent;
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:focus-visible {
+  outline: 1px solid transparent;
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button:hover {
@@ -129,7 +134,7 @@
 
 .header__paragraph {
   align-self: center;
-  inline-size: max(48vw, 355px);
+  inline-size: max(47.5vw, 355px);
   block-size: min-content;
   justify-self: right;
   font-weight: 700;
@@ -181,7 +186,6 @@
 
 .main {
   @media (max-width: 375px) {
-    min-block-size: 668px;
     max-inline-size: 375px;
   }
 }
@@ -196,6 +200,9 @@
   @media (max-width: 768px) {
     gap: 20px;
   }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
   @media (max-width: 375px) {
     grid-template-columns: 1fr;
     margin-inline-start: 10px;
@@ -203,7 +210,8 @@
   }
 }
 
-.short-title {
+.section-title {
+  max-inline-size: 80%;
   @media (max-width: 768px) {
     inline-size: 32%;
   }
@@ -268,6 +276,9 @@
   margin-block-start: 80px;
   @media (max-width: 768px) {
     gap: 20px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: none;
   }
   @media (max-width: 375px) {
     line-height: 130%;
@@ -374,42 +385,6 @@
   }
 }
 
-.footer::before {
-  position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 20px;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--decorative-element-color, #ff0070);
-  border-inline-end: 1px solid var(--decorative-element-color, #ff0070);
-}
-
-@media (max-width: 375px) {
-  .footer::before {
-    inset-block-start: 10px;
-    inset-inline-end: 10px;
-  }
-}
-
-.footer::after {
-  position: absolute;
-  inset-block-end: 21px;
-  inset-inline-start: 20px;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-end: 1px solid var(--decorative-element-color, #ff0070);
-  border-inline-start: 1px solid var(--decorative-element-color, #ff0070);
-}
-
-@media (max-width: 375px) {
-  .footer::after {
-    inset-block-end: 10px;
-    inset-inline-start: 10px;
-  }
-}
-
 .link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
@@ -426,6 +401,6 @@
 }
 
 .link:hover {
-  outline: 1px solid
-    rgb(from var(--decorative-element-color, #ff0070) r g b / 0.4);
+  border-block-end: 1px solid
+    var(--decorative-element-color, #ff0070);
 }

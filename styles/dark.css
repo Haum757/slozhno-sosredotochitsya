@@ -14,3 +14,7 @@
   --padding: clamp(0.625rem, 0.0286rem + 2.5445vi, 1.25rem);
   --cover-image-url: url(../images/cover-image-dark.png);
 }
+
+.theme_dark .decorative-element {
+  display: block;
+}
