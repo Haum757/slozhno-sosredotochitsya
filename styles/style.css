@@ -223,9 +223,6 @@
   font-size: 18px;
   line-height: 130%;
   margin-block-start: 10px;
-  @media (max-width: 768px) {
-    line-height: 130%;
-  }
 }
 
 .article__description {
@@ -242,7 +239,7 @@
   @media (max-width: 375px) {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    margin-block-start: 56px;
+    margin-block-start: 50px;
   }
 }
 
@@ -277,10 +274,11 @@
     gap: 20px;
   }
   @media (max-width: 375px) {
+    line-height: 130%;
     grid-template-columns: none;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    margin-block-start: 56px;
+    margin-block-start: 48px;
   }
 }
 
@@ -303,7 +301,7 @@
   @media (max-width: 375px) {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    margin-block-start: 56px;
+    margin-block-start: 48px;
   }
 }
 
