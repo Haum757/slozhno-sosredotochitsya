@@ -22,15 +22,16 @@
 }
 .decorated-zone {
   &::before {
-  position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 20px;
-  content: "";
-  inline-size: 25px;
-  block-size: 25px;
-  border-block-start: 1px solid var(--decorative-element-color, #ff0070);
-  border-inline-end: 1px solid var(--decorative-element-color, #ff0070);
+    position: absolute;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+    content: "";
+    inline-size: 25px;
+    block-size: 25px;
+    border-block-start: 1px solid var(--decorative-element-color, #ff0070);
+    border-inline-end: 1px solid var(--decorative-element-color, #ff0070);
   }
+  
   &::after {
     position: absolute;
     inset-block-end: 21px;
@@ -39,7 +40,7 @@
     inline-size: 25px;
     block-size: 25px;
     border-block-end: 1px solid var(--decorative-element-color, #ff0070);
-    border-inline-start: 1px solid var(--decorative-element-color, #ff0070); 
+    border-inline-start: 1px solid var(--decorative-element-color, #ff0070);
   }
 }
 
@@ -214,7 +215,7 @@
 .section-title {
   max-inline-size: 32%;
   @media (max-width: 768px) {
-    max-inline-size:none;
+    max-inline-size: none;
     inline-size: 32%;
   }
   @media (max-width: 375px) {
@@ -403,6 +404,5 @@
 }
 
 .link:hover {
-  border-block-end: 1px solid
-    var(--decorative-element-color, #ff0070);
+  border-block-end: 1px solid var(--decorative-element-color, #ff0070);
 }
