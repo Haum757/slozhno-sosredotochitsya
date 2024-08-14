@@ -41,7 +41,7 @@
     --cover-image-url: url(../images/cover-image-light.png);
   }
 
-  .theme_light .decorative-element {
+  .decorative-element {
     display: none;
   }
 }
