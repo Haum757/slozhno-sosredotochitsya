@@ -138,6 +138,7 @@
   @media (max-width: 768px) {
     inline-size: max(47.4vw, 355px); 
   }
+  
   @media (max-width: 375px) {
     justify-self: flex-start;
   }
